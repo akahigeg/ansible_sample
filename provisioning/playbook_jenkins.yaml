@@ -1,0 +1,16 @@
+---
+- hosts: servers
+  sudo: true
+  user: vagrant
+  tasks:
+    - name: get jenkins-ci.org.key
+      get_url: url="http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key" dest=/tmp/jenkins-ci.org.key
+
+    - name: add jenkins-ci.org.key
+      command: apt-key add /tmp/jenkins-ci.org.key
+
+    - name: jenkins.list
+      command: sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+    - name: install jenkins
+      apt: name=jenkins update_cache=yes
