@@ -48,6 +48,15 @@ provisioning/playbook_jenkins.yaml
         ansible.limit = 'all'
     end
 
+# Ansible雑感
+
+* ベストプラクティスに従おうとすると結局ファイルが多くなって見通し悪くなるような
+* ちょちょいっとしたものをちょちょいっと書けるのが魅力なのかな
+
+以下の本のサンプルに書いてあったBetter Shell Scriptってのがしっくりきた。
+
+http://tdoc.info/blog/2014/08/01/ansible_book.html
+
 # 参考
 
 * http://yutapon.hatenablog.com/entry/2014/04/08/102836
