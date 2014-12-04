@@ -17,6 +17,8 @@ MacOS X Marvericksにて
 
     vagrant box add debian74 http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-7.4_chef-provisionerless.box
 
+編集テスト
+
 ### 初期化
 
     mkdir ansible_sample
